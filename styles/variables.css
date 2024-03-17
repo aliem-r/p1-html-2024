@@ -15,9 +15,9 @@
     --main-bg: var(--white-c);
     --main-bg-alt: var(--grey-1);
     --main-text-color: var(--dark-1);
-    --main-text-color-alt: var(--dark-3);
-    --search-color: var(--grey-4);
-    --search-color-border: var(--grey-3);
+    --main-text-color-alt: var(--grey-4);
+
+    --header-color-border: var(--grey-2);
 
 
     /*icons*/

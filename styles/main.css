@@ -28,7 +28,7 @@ body * {
     font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 500;
-    transition: 200ms ease-in;
+    transition: 100ms ease-in;
     color: var(--main-text-color);
 }
 ol,
@@ -97,7 +97,7 @@ header .nav-left .search {
     gap: 6px;
     background-color: var(--main-bg-alt);
     color: var(--main-text-color);
-    padding: 10px 12px;
+    padding: 8px 10px;
     border: 1px solid var(--main-bg-alt);
     border-radius: 8px;
     cursor: pointer;
@@ -128,23 +128,36 @@ header .nav-left .search .search-hotkey {
 header .nav-right {
     align-items: stretch;
 }
+
+header .nav-right > *:not(:last-child){
+	padding-right: 20px;
+}
+header .nav-right .separator-w{
+	align-items: center;
+}
+header .nav-right .separator-w > .separator{
+	width: 1px;
+	height: 25px;
+	background-color: var(--header-color-border);
+}
+
 .nav-right nav {
 	align-items: stretch;
     gap: 20px;
 }
-.nav-right nav a, .nav-right nav > .dropdown-w{
+.nav-right a, .nav-right .dropdown-w{
 	display: flex;
 	align-items: center;
     text-decoration: none;
 	cursor: pointer;
 }
-.nav-right nav > .dropdown-w{
+.nav-right .dropdown-w{
 	position: relative;
 }
-.nav-right nav > .dropdown-w > span{
+.nav-right .dropdown-w > span{
 	display: flex;
 }
-.nav-right nav > .dropdown-w > span::after{
+.nav-right .dropdown-w > span::after{
 	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E");
 	display: block;
 	width: 13px;
@@ -153,33 +166,66 @@ header .nav-right {
 }
 
 .nav-right nav > a:hover,
-.nav-right nav > .dropdown-w:hover > span {
+.nav-right .dropdown-w:hover > span {
     opacity: 0.7;
 }
 
 /*Dropdown style*/
-.nav-right nav .nav-dropdown {
+
+.nav-right .nav-dropdown {
 	position: absolute;
     opacity: 0;
 	top: calc(100% - 10px);
-	min-width: 140px;
+	min-width: 150px;
 	padding: 12px;
 	background-color: var(--main-bg);
 	border: 1px solid var(--header-color-border);
 	border-radius: 12px;
 	box-shadow: 0 12px 32px rgba(0, 0, 0, .1), 0 2px 6px rgba(0, 0, 0, .08)
 }
-.nav-right nav > .dropdown-w:hover > span + .nav-dropdown{
+.nav-right .dropdown-w:hover > span + .nav-dropdown{
 	opacity: 1;
 }
-.nav-right nav .nav-dropdown a{
+.nav-right .nav-dropdown a{
 	padding: 8px 10px;
 	background-color: var(--main-bg);
-	border-radius: 8px;
+	border-radius: 6px;
+	transition: all 40ms ease-in;
 }
-.nav-right nav .nav-dropdown a:hover{
+.nav-right .nav-dropdown a:not(.active):hover{
 	background-color: var(--main-bg-alt);
 	color: var(--accent-1);
+}
+.nav-right .nav-dropdown .nav-dw-s2{
+	border-top: 1px solid var(--header-color-border);
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+/*Blank link icons*/
+
+.nav-right .blank-link a:not(.active)::after{
+	content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3E%3Cpath d='M0 0h24v24H0V0z' fill='none' /%3E%3Cpath d='M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z' /%3E%3C/svg%3E");
+	width: 11px;
+	margin: 2px 0 0 4px;
+	opacity: 0.4;
+}
+.nav-right .blank-link a.active{
+	font-weight: 700;
+}
+
+/*Lang nav and social nav*/
+header .lang svg, header .social-icons svg{
+	width: 16px;
+	fill: var(--main-text-color);
+	margin-top: 3px;
+}
+
+header .social-icons{
+	gap: 12px;
+}
+header .social-icons a:hover svg{
+	fill: var(--main-text-color-alt);
 }
 
 /*--- END OF HOME / HEADER ---*/
