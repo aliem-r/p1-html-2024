@@ -19,6 +19,7 @@
     --main-i-text-color: var( --grey-1);
 
     --header-color-border: var(--grey-2);
+    --separator-color-border: var(--grey-3);
 
     --content-grey-btn: var(--grey-2);
     --content-accent-btn: var(--accent-1);
