@@ -73,12 +73,19 @@ h2 * {
     flex-direction: column;
 }
 
+main .separator{
+	width: 100%;
+	border-bottom: 1px solid var(--header-color-border);
+	padding: 60px 0;
+}
+
 /*--- END OF GENERAL ---*/
 
 /*--- HOME / HEADER ---*/
 header {
     justify-content: center;
     width: 100%;
+	background-color: var(--main-bg);
     border-bottom: 1px solid var(--header-color-border);
     position: fixed;
 	z-index: 10;
@@ -88,7 +95,6 @@ header .container {
     height: 64px;
     width: 90%;
     max-width: 1160px;
-    background-color: var(--main-bg);
 }
 
 /*Left side*/
@@ -253,7 +259,12 @@ header .social-icons a:hover svg {
 /*--- END OF HOME / CONTENT ---*/
 body .content-w {
     padding-top: 64px;
-    width: 90%;
+	width: 100%;
+	align-items: center;
+}
+
+body .content-w section{
+	width: 90%;
     max-width: 1160px;
 }
 
