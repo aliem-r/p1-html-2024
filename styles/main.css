@@ -395,4 +395,53 @@ body .content-w section {
 	margin-bottom: 10px;
 }
 
+/*SPONSORS*/
+.sponsors{
+	overflow: hidden;
+	border-radius: 12px;
+}
+.sponsors, .sponsors .sponsor-tit, .sponsors .sponsor-w{
+	width: 100%;
+	gap: 4px
+}
+.sponsors .sponsor-tit, .sponsors .sponsor-w > div{
+	background-color: var(--main-bg-alt);
+	color: var(--main-text-color-alt);
+	text-align: center;
+	font-size: 16px;
+}
+.sponsors section.sponsor-tit{
+	padding: 12px 0;
+}
+.sponsors .sponsor-w > div:not(.empty){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	height: 200px;
+	cursor: pointer;
+}
+.sponsors .sponsor-w > div:not(.empty):hover{
+	background-color: var(--content-sponsor-hover);
+}
+.sponsors section img{
+	max-height: 96px;
+	max-width: 190px;
+	filter: grayscale(1);
+}
+.sponsors section > div:not(.empty):hover img{
+	filter: grayscale(0);
+}
+.sponsors .sponsor-w:last-child{
+	flex-wrap: wrap;
+}
+.sponsors .sponsor-w:last-child > div{
+	height: 120px;
+	flex: auto;
+	width: calc((100% - 16px)/5);
+}
+.sponsors .sponsor-w:last-child > div img{
+	max-width: 120px;
+}
+
 /*--- END OF HOME / CONTENT ---*/

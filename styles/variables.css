@@ -1,7 +1,7 @@
 :root {
     --white-c: #ffffff;
-    --grey-1: #f6f6f6;
-    --grey-2: #ebebeb;
+    --grey-1: #f6f6f9;
+    --grey-2: #ebecf1;
     --grey-3: #bebebe;
     --grey-4: #7b808a;
     --dark-1: #1b1b1b;
@@ -22,6 +22,7 @@
 
     --content-grey-btn: var(--grey-2);
     --content-accent-btn: var(--accent-1);
+    --content-sponsor-hover: var(--grey-2);
     
 
     /*icons*/
